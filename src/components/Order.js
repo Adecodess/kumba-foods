@@ -13,26 +13,24 @@ const Order = () => {
   const [details, setDetails] = useState([]);
   const [items, setItems] = useState([]);
 
+  // fetch data from the api
   const fetchOrders = async () => {
     setLoading(true);
 
     try {
       const response = await fetch(baseURL);
+      // assign the response to the data variable
       const data = await response.json();
 
+      // assign the data to person variable
       const person = data;
 
       setLoading(false);
-
-      setLoading(false);
+      // assign the person variable to a state to get the restaurant information
       setDetails(person.restaurant);
+      // assign the person variable to a state to get the items information
       setItems(person.items);
-
-      // console.log(person.items[0]);
-      // console.log(person.items[1]);
-      // console.log(person.items[2]);
-      // console.log(person.items[3]);
-
+      // assign the person variable to a state to get the order ID
       setOrder(person);
     } catch (error) {
       setLoading(false);
@@ -97,6 +95,7 @@ const Order = () => {
       </section>
       <Profile />
       <main>
+        {/* pass the state variable as a prop */}
         <Item items={items} />
       </main>
       <NavLink

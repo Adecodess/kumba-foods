@@ -50,7 +50,7 @@ const Profile = () => {
   return (
     <div>
       <h1 className='capitalize text-center font-bold text-2xl mt-10'>
-        profile
+        customer profile
       </h1>
       <main className='container mx-auto mt-4'>
         <section className='md:flex no-wrap md:-mx-2'>

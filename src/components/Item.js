@@ -20,6 +20,7 @@ const Item = ({ items }) => {
             <tbody
               className='bg-grey-light flex flex-col items-center justify-between overflow-y-scroll w-full'
               style={{ height: '50vh' }}>
+              {/* iterate over the data from the api and destructure them*/}
               {items.map((item, index) => {
                 const { name, category, price, currency, tax_pct, quantity } =
                   item;
